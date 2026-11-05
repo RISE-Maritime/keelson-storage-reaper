@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "keelson-storage-reaper"
+version = "0.1.0"
+description = "Expires navigation-decision records (encounter, navigation_advice, advice_disposition) from Zenoh router storage after a retention, judged by the router's own timestamps."
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+dependencies = [
+    # EXACT, and the router's version (keelson-router runs eclipse/zenoh:1.10.1).
+    "eclipse-zenoh==1.10.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.4", "ruff==0.14.11"]
+
+[tool.setuptools]
+packages = ["reaper"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 120
