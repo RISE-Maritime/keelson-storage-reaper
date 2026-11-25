@@ -9,7 +9,7 @@ last written. A payload's own times (`closed_at`, `retired_at`, `valid_to`) are 
 a replay can set them months back. The protocol (keelson protocols/navigation_decisions.yaml) restates
 an open encounter "in full until it closes" and an advice "while the manoeuvre holds, and once more
 when retired", so a key the router has not stored for the retention was closed or retired that long
-ago -- or abandoned by a navigator that stopped without closing it, which is the case this also clears.
+ago -- or abandoned by an ANS that stopped without closing it, which is the case this also clears.
 
   encounter          `{producer…}/{voyage_id}/{encounter_id}`  expires when last stored > retention ago
   navigation_advice  `{producer…}/{voyage_id}/{advice_id}`     the same

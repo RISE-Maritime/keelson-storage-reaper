@@ -7,7 +7,7 @@ runs beside the router.
 ## Why it exists
 
 The router keeps every one of these keys forever. Every encounter and every advice is its own key,
-and on 2026-11-05 one simulated vessel's navigator wrote about 880 encounters and 1,950 advice in a
+and on 2026-11-05 one simulated vessel's ANS wrote about 880 encounters and 1,950 advice in a
 day. Every station that opens its navigation display fetches and decodes them all, to keep the last
 few minutes (crowsnest-dev #150).
 
@@ -28,7 +28,7 @@ The protocol restates an open encounter "in full until it closes", and an advice
 manoeuvre holds, and once more when retired". So a key the router has not stored for the retention
 is one of two things:
 - closed or retired that long ago;
-- **left open by a navigator that stopped without closing it.** That case also shows on every
+- **left open by an ANS that stopped without closing it.** That case also shows on every
   station as "advisor quiet", indefinitely.
 
 | Subject | Key source | Expires when |
